@@ -7,7 +7,7 @@ from car_factory import CarFactory
 class TestCalliope(unittest.TestCase):
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
-        car = CarFactory.create_calliope(today, today.replace(year=today.year - 3), 0, 0)
+        car = CarFactory.create_calliope(today, today.replace(year=today.year - 4), 0, 0)
         self.assertTrue(car.needs_service())
 
     def test_battery_should_not_be_serviced(self):
@@ -29,7 +29,7 @@ class TestCalliope(unittest.TestCase):
 class TestGlissade(unittest.TestCase):
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
-        car = CarFactory.create_glissade(today, today.replace(year=today.year - 3), 0, 0)
+        car = CarFactory.create_glissade(today, today.replace(year=today.year - 4), 0, 0)
         self.assertTrue(car.needs_service())
 
     def test_battery_should_not_be_serviced(self):
@@ -51,7 +51,7 @@ class TestGlissade(unittest.TestCase):
 class TestPalindrome(unittest.TestCase):
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
-        car = CarFactory.create_palindrome(today, today.replace(year=today.year - 3), False)
+        car = CarFactory.create_palindrome(today, today.replace(year=today.year - 4), False)
         self.assertTrue(car.needs_service())
 
     def test_battery_should_not_be_serviced(self):
